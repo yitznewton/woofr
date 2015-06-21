@@ -1,0 +1,11 @@
+<ol class="barks-list">
+  <% @barks.each do |b| %>
+    <li>
+      <div class="bark-username">@<%= b.user.username %></div>
+      <div class="bark-body"><%= b.body %></div>
+      <time class="bark-barked-at"
+        datetime="<%= b.barked_at.to_datetime %>"
+        >barked at <span class="timestring"><%= b.barked_at %></span></time>
+    </li>
+  <% end %>
+</ol>
