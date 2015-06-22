@@ -2,7 +2,8 @@
   <%= f.text_area :body %>
   <%= f.label :bark, :barked_at do %>
     Barked at
-    <%= f.datetime_field :barked_at %>
+    <%= datetime_field_tag :raw_barked_at %>
+    <%= f.hidden_field :barked_at %>
   <% end %>
   <%= f.submit 'Bark!' %>
 <% end %>

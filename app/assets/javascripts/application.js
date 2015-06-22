@@ -23,5 +23,13 @@
     $('.timestring').each(function() {
       this.textContent = moment(this.textContent).format('lll');
     });
+
+    $('.bark-form').submit(function() {
+      var barkMoment = moment($('#raw_barked_at').val());
+
+      if (barkMoment.isValid()) {
+        $('#bark_barked_at').val(barkMoment.toISOString());
+      }
+    });
   });
 })();
