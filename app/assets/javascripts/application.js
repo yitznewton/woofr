@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require moment
+
+(function() {
+  'use strict';
+
+  $(document).ready(function() {
+    $('.timestring').each(function() {
+      this.textContent = moment(this.textContent).format('lll');
+    });
+  });
+})();
