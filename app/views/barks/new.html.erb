@@ -1,0 +1,8 @@
+<%= form_for @bark, html: {class: 'bark-form'} do |f| %>
+  <%= f.text_area :body %>
+  <%= f.label :bark, :barked_at do %>
+    Barked at
+    <%= f.datetime_field :barked_at %>
+  <% end %>
+  <%= f.submit 'Bark!' %>
+<% end %>

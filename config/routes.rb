@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'barks#index'
 
+  resources :barks, only: [:index, :new, :create]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
