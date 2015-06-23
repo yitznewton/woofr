@@ -7,7 +7,13 @@ Moment.js.
 
 ```shell
 $ bundle install
-$ rails db:migrate db:seed
+$ rails db:migrate
+```
+
+The database seeds will add several random users and barks belonging to them.
+
+```shell
+$ rails db:seed
 ```
 
 ## Startup
